@@ -1,0 +1,39 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: auto;
+    
+}
+
+.news-sort {
+    margin-bottom: 8px;
+    text-align: end;
+}
+
+.news-sort select {
+    padding: 0.5em;
+}
+
+.news-grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 8px;
+}
+
+.news-container {
+    border-radius: 8px;
+    z-index: 100;
+    border: 1px solid crimson;
+    padding: 8px;
+}
+
+.news-title {
+    text-align: center;
+    padding: 0.5em;
+    font-weight: bold;
+}
+
+.news-info {
+    margin-left: 16px;
+}

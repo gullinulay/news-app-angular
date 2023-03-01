@@ -1,0 +1,21 @@
+<header>
+  <h1>{{title}}</h1>
+  <div class="search-keyword">
+    <input (keyup.enter)="getKeyword(keyword.value); keyword.value=''" type="text" name="keyword" placeholder="Enter a keyword:" #keyword>
+    <button  (click)="getKeyword(keyword.value); keyword.value=''"><span>Search</span></button>
+  </div>
+</header>
+
+<nav>
+  <ul>
+    <li><a [routerLinkActive]="['active']" [routerLink]="['/news', 'general']">General News</a></li>
+    <li><a [routerLinkActive]="['active']" [routerLink]="['/news', 'entertainment']">Entertainment</a></li>
+    <li><a [routerLinkActive]="['active']" [routerLink]="['/news', 'business']">Business</a></li>
+    <li><a [routerLinkActive]="['active']" [routerLink]="['/news', 'health']">Health</a></li>
+    <li><a [routerLinkActive]="['active']" [routerLink]="['/news', 'science']">Science</a></li>
+    <li><a [routerLinkActive]="['active']" [routerLink]="['/news', 'sports']">Sports</a></li>
+    <li><a [routerLinkActive]="['active']" [routerLink]="['/news', 'technology']">Technology</a></li>
+  </ul>
+</nav>
+<hr>
+<router-outlet></router-outlet>

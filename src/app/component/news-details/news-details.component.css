@@ -1,0 +1,26 @@
+.container {
+    max-width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin: auto;
+}
+
+.news-title {
+    text-align: center;
+}
+
+.news-date {
+    margin-right: 1em;
+    text-align: end;
+}
+
+.news-author {
+    margin-right: 1em;
+    text-align: end;
+}
+
+.news-description {
+    text-align: center;
+    text-indent: 10%;
+}

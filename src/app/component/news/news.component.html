@@ -1,0 +1,25 @@
+<div class="container">
+    <h1 class="news-title">Latest {{getCategory() | titlecase}} News</h1>
+    <!-- SORT NEWS -->
+    <div class="news-sort">
+        <label>Sort: </label>
+        <select [(ngModel)]="sortDefault">
+            <option [routerLink]="['.']" [queryParams]="{sort: s.value}" [value]="s.value" *ngFor="let s of getSortOptions()">
+                {{s.name}}
+            </option>
+        </select>
+    </div>
+    <!-- GRID NEWS -->
+    <div class="news-grid-container" *ngIf="getNewsResponse">
+        <div class="news-container" *ngFor="let news of getNewsResponse()?.data">
+
+            <h3 class="news-title">{{news.title}}</h3>
+            <div class="news-info">
+                <p class="news-date">Date: {{news.published | date:'longDate'}}</p>
+                <p class="news-source">Source: {{news.source}}</p>
+                <p class="news-author">Author: {{news.author}}</p>
+                <p><a [routerLink]="['./details', news.id]">Read More...</a></p>
+            </div>
+        </div>
+    </div>
+</div>

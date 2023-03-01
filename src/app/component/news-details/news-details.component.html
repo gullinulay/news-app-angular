@@ -1,0 +1,7 @@
+<div class="container">
+    <h1 class="news-title">{{newsData[0].title}}</h1>
+    <p class="news-date">Date: {{newsData[0].published | date:'mediumDate'}}</p>
+    <p class="news-author">Author: {{newsData[0].author}}</p>
+    <p class="news.description">{{newsData[0].description}}</p>
+    <p class="news-url"><a [href]="newsData[0].url">For more info ..</a></p>
+</div>
